@@ -1,3 +1,14 @@
+# Librería 
+## Solución del problema: seudo código
+Modulo para exportar función (mdLinks):
+modulo.exportar es igual a una función anónima
+
+
+## Descripción del módulo
+## Instrucciones de instalación/uso
+## Documentación del API
+## Ejemṕlos
+-------------------------------------------------------------------------------------------------------
 # Markdown Links
 
 ## Índice

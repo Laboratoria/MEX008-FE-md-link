@@ -1,4 +1,22 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "------------------------------------------------------------------------------------------------------- # Markdown Links",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bere333/MEX008-FE-md-link.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bere333/MEX008-FE-md-link/issues"
+  },
+  "homepage": "https://github.com/Bere333/MEX008-FE-md-link#readme"
 }
