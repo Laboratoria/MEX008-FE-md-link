@@ -1,6 +1,4 @@
-module.exports = () => {
-  const mdLinks = (path, options) => {
-    
-  }
+module.exports = (path, options) => {
+  
 };
     

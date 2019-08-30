@@ -15,6 +15,9 @@
   },
   "author": "",
   "license": "MIT",
+  "bin": {
+    "say-hello":"./cli.js"
+  },
   "bugs": {
     "url": "https://github.com/Bere333/MEX008-FE-md-link/issues"
   },

@@ -1,7 +1,15 @@
 # Librería 
-## Solución del problema: seudo código
+## Solución del problema: 
+### Diagrama de flujo:
+El algoritmo que describe el funcionamiento del módulo mdlinks se muestra a continuación:
+
+### seudo código
+#### Archivo index.js
 Modulo para exportar función (mdLinks):
-modulo.exportar es igual a una función anónima
+modulo.exportar es igual a una función anónima {
+  constante mdLinks es igual a una función con parámetros (path, options)
+}
+
 
 
 ## Descripción del módulo
