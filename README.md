@@ -2,7 +2,7 @@
 ## Solución del problema: 
 ### Diagrama de flujo:
 El algoritmo que describe el funcionamiento del módulo mdlinks se muestra a continuación:
-![algoritmo-mdlinks](img/Algoritmo_ modulo_mdlinks.jpeg)
+![algoritmo-mdlinks](img/Algoritmomodulo.jpeg)
 
 
 ### seudo código
