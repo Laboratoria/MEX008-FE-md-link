@@ -1,4 +1,6 @@
-module.exports = (path, options) => {
+const mdLinks = (path, options) => {
+    
   
 };
     
+module.exports = mdLinks;
