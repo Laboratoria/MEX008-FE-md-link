@@ -2,7 +2,12 @@
 ## Solución del problema: 
 ### Diagrama de flujo:
 El algoritmo que describe el funcionamiento del módulo mdlinks se muestra a continuación:
-![algoritmo-mdlinks](img/Algoritmomodulo.jpeg)
+
+![algoritmo-mdlinks](img/modulomdlinks.jpeg)
+
+El algoritmo que describe el funcionamiento del ejecutable cli.js se muestra a continuación:
+
+![algoritmo.cli](img/diagramacli.jpeg)
 
 
 ### seudo código
