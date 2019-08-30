@@ -2,8 +2,8 @@
 ## Solución del problema: 
 ### Diagrama de flujo:
 El algoritmo que describe el funcionamiento del módulo mdlinks se muestra a continuación:
-![algoritmo-mdlinks][1]
-[1]: img/Algoritmo_ módulo_mdlinks.jpeg
+![algoritmo-mdlinks](img/Algoritmo_ modulo_mdlinks.jpeg)
+
 
 ### seudo código
 #### Archivo index.js
