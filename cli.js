@@ -1,2 +1,6 @@
 #!/usr/bin/env node
-console.log("Hello");
+const mdCli = require('./')
+
+
+
+

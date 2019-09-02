@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,13 @@
   "author": "",
   "license": "MIT",
   "bin": {
-    "say-hello":"./cli.js"
+    "md-links": "./cli.js"
   },
   "bugs": {
     "url": "https://github.com/Bere333/MEX008-FE-md-link/issues"
   },
-  "homepage": "https://github.com/Bere333/MEX008-FE-md-link#readme"
+  "homepage": "https://github.com/Bere333/MEX008-FE-md-link#readme",
+  "dependencies": {
+    "marked": "^0.7.0"
+  }
 }
