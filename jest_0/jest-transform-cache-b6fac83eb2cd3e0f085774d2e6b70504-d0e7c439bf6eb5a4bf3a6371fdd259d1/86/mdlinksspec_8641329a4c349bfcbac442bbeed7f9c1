@@ -1,0 +1,17 @@
+6449cb528eff3c3e74c78863f88a1e19
+/*const mdLinks = require('../').default;
+
+
+describe('mdLinks', () => {
+
+  it('should...', () => {
+    console.log('FIX ME!');
+  });
+
+});
+*/
+import suma from './index';
+test('sumar 1 + 2 es igual a 3', () => {
+  expect(suma(1, 2)).toBe(3);
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1kLWxpbmtzLnNwZWMuanMiXSwibmFtZXMiOlsic3VtYSIsInRlc3QiLCJleHBlY3QiLCJ0b0JlIl0sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7QUFXQSxPQUFPQSxJQUFQLE1BQWlCLFNBQWpCO0FBRUFDLElBQUksQ0FBQywwQkFBRCxFQUE2QixNQUFNO0FBQ3JDQyxFQUFBQSxNQUFNLENBQUNGLElBQUksQ0FBQyxDQUFELEVBQUksQ0FBSixDQUFMLENBQU4sQ0FBbUJHLElBQW5CLENBQXdCLENBQXhCO0FBQ0QsQ0FGRyxDQUFKIiwic291cmNlc0NvbnRlbnQiOlsiLypjb25zdCBtZExpbmtzID0gcmVxdWlyZSgnLi4vJykuZGVmYXVsdDtcblxuXG5kZXNjcmliZSgnbWRMaW5rcycsICgpID0+IHtcblxuICBpdCgnc2hvdWxkLi4uJywgKCkgPT4ge1xuICAgIGNvbnNvbGUubG9nKCdGSVggTUUhJyk7XG4gIH0pO1xuXG59KTtcbiovXG5pbXBvcnQgc3VtYSBmcm9tICcuL2luZGV4JztcblxudGVzdCgnc3VtYXIgMSArIDIgZXMgaWd1YWwgYSAzJywgKCkgPT4ge1xuICBleHBlY3Qoc3VtYSgxLCAyKSkudG9CZSgzKTtcbn0pO1xuIl19

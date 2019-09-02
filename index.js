@@ -1,3 +1,8 @@
-module.exports = () => {
+/*module.exports = () => {
   // ...
 };
+*/
+function suma(a, b) {
+  return a + b;
+}
+export default suma;
