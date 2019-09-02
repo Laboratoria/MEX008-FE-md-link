@@ -1,4 +1,26 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "mdlinks-set",
+  "version": "0.0.0",
+  "description": "## Índice",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silviatrinidad/MEX008-FE-md-link.git"
+  },
+  "keywords": [
+    "md",
+    "markdown"
+  ],
+  "author": "Trinity-seg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silviatrinidad/MEX008-FE-md-link/issues"
+  },
+  "homepage": "https://github.com/silviatrinidad/MEX008-FE-md-link#readme"
 }
