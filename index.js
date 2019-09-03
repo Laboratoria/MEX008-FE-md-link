@@ -6,13 +6,12 @@
 
 
 //Funcion para leer archivo md y visualizarlo en consola
-let fs = require('fs');
+const  fs = require('fs');
 
-fs.readFile('readme-links.md', 'utf8', (err, dta) => {
-  if(err) {
-    console.log('error: ' err);
-  }
-  else {
+fs.readFile('readme-links.md', 'utf-8', (error, data) => {
+  if(error) {
+    console.log('Error ${error}');
+  }else{
     console.log(data);
   }
-  });
+});
