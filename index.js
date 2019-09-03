@@ -1,18 +1,19 @@
+
+//const fs = require('fs');
+//const path = require('path')
 const marked = require('marked');
-const fs = require('fs');
-
-const buf = fs.readFileSync('./README.md');
-const str = buf.toString()
-//console.log(str);
+//const cli = require('cli');
 
 
-
-console.log(marked(str));
-
-
-
-
-//const mdLinks = (path, options) => {
-//};
+const mdLinks = (err, data) => {
+    //const str = cli.toString();
+    if (err) throw err;
+    const str = data.toString()
+   marked(str);
+   console.log(marked(str));
+   
     
-//module.exports = mdLinks;
+
+};
+    
+module.exports = mdLinks;
