@@ -1,0 +1,40 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'init' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly package data { name: 'mdlinks-set',
+4 silly package data   version: '0.0.0',
+4 silly package data   description: '## Índice',
+4 silly package data   main: 'index.js',
+4 silly package data   directories: { test: 'test' },
+4 silly package data   scripts: { tests: 'jest' },
+4 silly package data   repository:
+4 silly package data    { type: 'git',
+4 silly package data      url: 'git+https://github.com/silviatrinidad/MEX008-FE-md-link.git' },
+4 silly package data   keywords: [ 'md', 'markdown' ],
+4 silly package data   author: 'Trinity-seg',
+4 silly package data   license: 'MIT',
+4 silly package data   bugs:
+4 silly package data    { url: 'https://github.com/silviatrinidad/MEX008-FE-md-link/issues' },
+4 silly package data   homepage: 'https://github.com/silviatrinidad/MEX008-FE-md-link#readme',
+4 silly package data   devDependencies: { jest: '^24.9.0' },
+4 silly package data   dependencies: { require: '^2.4.20', shelljs: '^0.8.3' } }
+5 info init written successfully
+6 verbose stack Error: EACCES: permission denied, open '/home/silviatrinidad/Escritorio/Proyectos-Laboratoria/MEX008-FE-md-link/package.json'
+7 verbose cwd /home/silviatrinidad/Escritorio/Proyectos-Laboratoria/MEX008-FE-md-link
+8 error Linux 4.15.0-58-generic
+9 error argv "/usr/bin/node" "/usr/bin/npm" "init"
+10 error node v8.10.0
+11 error npm  v3.5.2
+12 error path /home/silviatrinidad/Escritorio/Proyectos-Laboratoria/MEX008-FE-md-link/package.json
+13 error code EACCES
+14 error errno -13
+15 error syscall open
+16 error Error: EACCES: permission denied, open '/home/silviatrinidad/Escritorio/Proyectos-Laboratoria/MEX008-FE-md-link/package.json'
+16 error  { Error: EACCES: permission denied, open '/home/silviatrinidad/Escritorio/Proyectos-Laboratoria/MEX008-FE-md-link/package.json'
+16 error   errno: -13,
+16 error   code: 'EACCES',
+16 error   syscall: 'open',
+16 error   path: '/home/silviatrinidad/Escritorio/Proyectos-Laboratoria/MEX008-FE-md-link/package.json' }
+17 error Please try running this command again as root/Administrator.
+18 verbose exit [ -13, true ]

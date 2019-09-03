@@ -2,7 +2,5 @@
   // ...
 };
 */
-function suma(a, b) {
-  return a + b;
-}
-export default suma;
+// __tests__/index.test.js
+
