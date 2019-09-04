@@ -3,6 +3,9 @@
 
 //libraries
 
+//filesystem
+const fs = require('fs');
+const http = require('http');
 //Comandos de shell portátiles de Unix
 const shelljs = require('shelljs');
 // colores para la cli
@@ -11,6 +14,15 @@ const chalk = require('chalk');
 const figlet = require('figlet');
 //colección de interfaces de usuario de línea de comando comunes
 const inquirer = require('inquirer');
+
+
+
+//cachar la respuesta del usuario, link
+const catchInput = () => {
+  let inputLink = initInstruction.instruction.name;
+  console.log( 'tu link es: ' + inputLink);
+}
+
 
 //1.2 funcion para mostrar instrucciones
 const initInstruction = () => {
@@ -45,7 +57,7 @@ const mdLinks = async () => {
   //y solicitar que introduzca el link a analizar
   initInstruction();
   //
-  
+  catchInput();
 
   //
 
@@ -53,6 +65,7 @@ const mdLinks = async () => {
 };
 
 mdLinks();
+//guardando pequeño avance
 
 /*module.exports = () => {
   // ...
