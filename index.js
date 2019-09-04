@@ -16,7 +16,7 @@ const inquirer = require('inquirer');
 const initInstruction = () => {
   const instruction = [
     {
-      name: "FICHERO",
+      name: "URL",
       type: "input",
       message: "Introduce la ruta para analizar tu archivo : "
     },
@@ -30,7 +30,7 @@ const initLibrary = () => {
   console.log(
     chalk.green(
       figlet.textSync('MD-LINKS SETG', {
-        font: "Standard",
+        font: "AMC Slash",
         horizontalLayout:"default",
         verticalLayout: "default"
       })
@@ -44,6 +44,7 @@ const mdLinks = async () => {
   initLibrary();
   //y solicitar que introduzca el link a analizar
   initInstruction();
+  //
   
 
   //
