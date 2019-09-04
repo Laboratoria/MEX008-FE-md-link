@@ -12,15 +12,20 @@ const figlet = require('figlet');
 //colección de interfaces de usuario de línea de comando comunes
 const inquirer = require('inquirer');
 
-//funcion para mostrar instrucciones
+//1.2 funcion para mostrar instrucciones
 const initInstruction = () => {
-
-
-
+  const instruction = [
+    {
+      name: "FICHERO",
+      type: "input",
+      message: "Introduce la ruta para analizar tu archivo : "
+    },
+  ];
+  return inquirer.prompt(instruction);
 }
 
 
-//iniciando funcion cabecera de bievenida a md-links setg
+//1.1 iniciando funcion cabecera de bievenida a md-links setg
 const initLibrary = () => {
   console.log(
     chalk.green(
@@ -33,7 +38,7 @@ const initLibrary = () => {
 );
 };
 
-//Funcion principal MDLINKS
+//1.- Funcion principal MDLINKS
 const mdLinks = async () => {
   //mostrar texto de presentacion de la libreria md-links
   initLibrary();
