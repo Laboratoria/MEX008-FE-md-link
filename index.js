@@ -1,11 +1,52 @@
-// #!/usr/bin/env node
+#!/usr/bin/env node
+
+const fs= require('fs');
+const 
+
+
+
+
+
+
+
+
+
+
+// console.log('hola');
+
+// const file = process.argv[2];
+// // readfile le inyecta el valor a la funcion anonima
+// fs.readFile(file, 'utf8', (err,data) => {
+//   let numLines = data.split('\n').length -1;
+  
+//   console.log(numLines);
+
+// });
+
+// console.log('chao');
+
+
+
+
+
+
+//leyendo lineas del archivo
+/*
+const numLines = 
+fs.readFileSync(process.argv[2], 'utf8')
+.split('\n').length -1;
+
+console.log(numLines);
+*/
+
+
+
 
 
 // //libraries
 
 // //filesystem
 // const fs = require('fs');
-// const http = require('http');
 // //Comandos de shell portátiles de Unix
 // const shelljs = require('shelljs');
 // // colores para la cli
@@ -18,10 +59,7 @@
 
 
 // //cachar la respuesta del usuario, link
-// const catchInput = () => {
-//   let inputLink = initInstruction.instruction.name;
-//   console.log( 'tu link es: ' + inputLink);
-// }
+
 
 
 // //1.2 funcion para mostrar instrucciones
