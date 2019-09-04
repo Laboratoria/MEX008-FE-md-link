@@ -12,26 +12,34 @@ const figlet = require('figlet');
 //colección de interfaces de usuario de línea de comando comunes
 const inquirer = require('inquirer');
 
-// funcion presentacion de la libreria
-const initLibrary = () => {
-  console.log(
-    chalk.bgGreen(
-      figlet.textSync('MD-LINKS SETG', {
-        font: "AMC Neko"
-      })
-    )
+//funcion para mostrar instrucciones
+const initInstruction = () => {
 
 
-
-)
 
 }
 
+
+//iniciando funcion cabecera de bievenida a md-links setg
+const initLibrary = () => {
+  console.log(
+    chalk.green(
+      figlet.textSync('MD-LINKS SETG', {
+        font: "Standard",
+        horizontalLayout:"default",
+        verticalLayout: "default"
+      })
+    )
+);
+};
+
 //Funcion principal MDLINKS
 const mdLinks = async () => {
-  /*mostrar texto de presentacion de la libreria md-links
-  y solicitar que introduzca el link a analizar*/
-
+  //mostrar texto de presentacion de la libreria md-links
+  initLibrary();
+  //y solicitar que introduzca el link a analizar
+  initInstruction();
+  
 
   //
 
