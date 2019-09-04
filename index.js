@@ -1,9 +1,12 @@
 
 //const fs = require('fs');
-//const path = require('path')
+const path = require('path')
 const marked = require('marked');
 //const cli = require('cli');
-const separador = "<a";
+const jsdom = require("jsdom")
+//const separador = "<a";
+const { JSDOM } = jsdom;
+//const url = require('url');
 
 
 const mdLinks = (err, data) => {
@@ -11,9 +14,17 @@ const mdLinks = (err, data) => {
     if (err) throw err;
     const str = data.toString()
     const html = marked(str);
-   //console.log(str);
-   const strSpl = html.split(separador);
-   console.log(strSpl.length);
+   //console.log(html);
+   //const strSpl = html.split(separador);
+   //console.log(strSpl.length);
+   const dom = new JSDOM(html);
+   //console.log(dom);
+   
+   const link = dom.window.document.querySelector('a').href
+   const arrlink = path.parse(link);// se puede usar también url en vez de path
+   console.log(arrlink);
+   
+   
    
 
 };
