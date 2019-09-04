@@ -1,7 +1,32 @@
 #!/usr/bin/env node
 
 const fs= require('fs');
-const 
+const path = require('path');
+
+
+
+
+
+
+
+// // -----------------------------------
+// fs.readdir(process.argv[2], (err, files) => {
+//   //console.log(files);
+//   //recorrer los arrays
+//   //files.forEach( (file) => {
+//     const filterFiles = files.filter( (file) => {
+//       return path.extname(file) === '.' + process.argv[3]
+//     })
+//     .forEach( (file) => { console.log(file);
+//     });
+
+//     // console.log(filterFiles);
+//     // console.log(files);
+//     //console.log(file);
+//     /*if(path.extname(file) === '.' + process.argv[3]) {
+//       console.log(file);
+//       */
+//     });
 
 
 
