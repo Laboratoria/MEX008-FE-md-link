@@ -6,17 +6,16 @@ const mdLinks = (path, options) => {
     //console.log(path, options);
     const promiseArray = new Promise ( (resolve, reject) => {
         fs.readFile(path, (err, data) => {
-        let urls = [];
-        urls =  geturls(err, data)
-        const extension = /(.md)$/;
-
-        if(extension.exec(path)){
-            console.log(urls);
+            const extension = /(.md)$/;
             
+        if(extension.exec(path)){
+            let urls = [];
+            urls =  geturls(err, data)
+            //console.log(urls);
             resolve(urls);
         }
         else{
-            let error = new Error('Error de lectura de archivo');
+            let error = new Error('Error de lectura, no se trata de un archivo con extensión .md');
             reject(error)
         }
 
