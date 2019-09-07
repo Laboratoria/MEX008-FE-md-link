@@ -6,6 +6,3 @@ MD-Links es un protecto en el cual se desarrolla una libreria para leer el conte
 ## Diagrama de Flujo
 
 ![diagrama-flujo](https://github.com/silviatrinidad/MEX008-FE-md-link/blob/master/img/Diagrama%20en%20blanco.jpeg)
-
-
-
