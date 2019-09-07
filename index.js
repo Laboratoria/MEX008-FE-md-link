@@ -4,7 +4,7 @@
 //filesystem
 const fs = require('fs');
 //path
-const path = require('path');
+//const path = require('path');
 //Comandos de shell portátiles de Unix
 const shelljs = require('shelljs');
 // colores para la cli
@@ -14,7 +14,26 @@ const figlet = require('figlet');
 //colección de interfaces de usuario de línea de comando comunes
 const inquirer = require('inquirer');
 
+
+
 //funcion para leer archivo
+const readDocumentsLinks= () => {
+  fs.readdir('./', (error, files) => {
+    if(error) {
+      throw error;
+    }
+    console.log(files);
+
+    fs.readFile(process.argv[2], 'UTF-8', (error,file) => {
+      if(error) {
+        throw error;
+      }
+      console.log(chalk.black.bgGreenBright(file));
+    });
+    console.log(chalk.cyan('Contenido del archivo ....'));
+  });
+};
+//readDocument();
 
 //Funcion para mostrar instruccion
 const mdLinksInstruction = () => {
@@ -49,8 +68,8 @@ const initMdLinks = async () => {
   //mdLinksInstruction();
   //respuestas-await es la espera de la respuesta
   const answerMdLinks= await mdLinksInstruction();
-  const { URL } = answer;
-  console.log(answer);
+  const { URL } = readDocumentsLinks();
+  console.log(URL);
 
 };
   initMdLinks();
