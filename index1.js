@@ -8,8 +8,9 @@ const mdLinks = (path, options) => {
         fs.readFile(path, (err, data) => {
         let urls = [];
         urls =  geturls(err, data)
+        const extension = /(.md)$/;
 
-        if(typeof urls == Object){
+        if(extension.exec(path)){
             console.log(urls);
             
             resolve(urls);
