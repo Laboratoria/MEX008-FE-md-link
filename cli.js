@@ -1,18 +1,10 @@
 #!/usr/bin/env node
-const mdLinks = require('./')
-const fs = require('fs');
+const mdLinks = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/index1.js');//Estará en el index1
 
+mdLinks(process.argv[2], process.argv[3])
+.then(respuesta => console.log(respuesta))
+.catch( error => console.error(error));
 
-const cli = fs.readFile(process.argv[2] || null, mdLinks);
-
-module.exports = cli;
-
-
-
-
-
-
-
-
+//console.log(process.argv[2],process.argv[3]);
 
 

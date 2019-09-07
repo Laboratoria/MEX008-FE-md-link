@@ -1,50 +1,41 @@
-
-//const fs = require('fs');
-const path = require('path')
-const marked = require('marked');
-//const cli = require('cli');
-const jsdom = require("jsdom")
-//const separador = "<a";
-const { JSDOM } = jsdom;
-const url = require('url');
+const geturls = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/obtenerhtml.js');
+const fs = require('fs');
+const exitoCallback = () => {}
+const falloCallback = () => {}
 
 
-const mdLinks = (err, data) => {
-    //const str = cli.toString();
-    if (err) throw err;
-    const str = data.toString()
-    const html = marked(str);
-   //console.log(html);
-   //const strSpl = html.split(separador);
-   //console.log(strSpl.length);
-   const dom = new JSDOM(html);
-   //console.log(dom.window['markdown-links']);
-   //for()
-   const etiquetasLi = dom.window.document.querySelectorAll('a');
-   
-   etiquetasLi.forEach(element => {
-       
-      // element.getAttribute('href')
-       console.log(element.getAttribute('href'));
-   });
-   //let array;
-   //while (array = etiquetasLi != null) {
-       //console.log(array[0]);
-       
+//const err = 'error';
 
-       
-   
-   //const etiquetasA = etiquetasLi.getAttribute("href") 
-   
-   //const link = dom.window.document.etiquetasA
-   //const arrlink = path.parse(link);// se puede usar también url en vez de
-   //console.log(arrlink);
-   //console.log(link);
-   
-   
-   
-   
+//geturls(err, process.argv[2])
+const arrayUrls = fs.readFile(process.argv[2], (err, data) => {
 
-};
+    let urls = [];
+    urls =  geturls(err, data)
     
-module.exports = mdLinks;
+    console.log(typeof urls);
+})
+    //=>{ 
+
+
+//const mdLinks = (path, options) => {
+    
+
+
+//}
+
+//console.log(geturls);
+
+
+//console.log(fs.readFile(process.argv[2], geturls));
+
+
+
+//const mdLinks = (path, options) => {
+
+
+
+//}
+
+module.exports = arrayUrls ;
+
+
