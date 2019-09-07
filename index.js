@@ -1,151 +1,56 @@
 #!/usr/bin/env node
 
-const fs= require('fs');
+//libraries
+//filesystem
+const fs = require('fs');
+//path
 const path = require('path');
+//Comandos de shell portátiles de Unix
+const shelljs = require('shelljs');
+// colores para la cli
+const chalk = require('chalk');
+// cabeceras con caracteres y diferentes estilos de tipografia
+const figlet = require('figlet');
+//colección de interfaces de usuario de línea de comando comunes
+const inquirer = require('inquirer');
 
-const folder = process.argv[2]
-const ext = '.' + process.argv[3]
+//funcion para leer archivo
 
-fs.readdir(folder, function (err, files) {
-  if (err) return console.error(err)
-  files.forEach(function (file) {
-    if (path.extname(file) === ext) {
-      console.log(file)
-    }
-  })
-})
+//Funcion para mostrar instruccion
+const mdLinksInstruction = () => {
+  const oneInstruction = [
+    {
+      name: 'URL',
+      type: 'input',
+      message: 'Introduce una ruta válida para comenzar: '
+    },
+  ];
+  return inquirer.prompt(oneInstruction);
+};
 
+//iniciando funcion cabecera
+const headerMdlinks = () => {
+  console.log(
+    chalk.blue(
+      figlet.textSync('MD LINKS', {
+        font: 'AMC Tubes',
+        horizontalLayout: 'default',
+        verticalLayout: 'default'
+      })
+    )
+  );
+};
 
+//Funcion principal para iniciar todo
+const initMdLinks = async () => {
+  //mostrar cabecera de bienvenida-inicio-
+  headerMdlinks();
+  //solicitar que introduzca el link a analizar
+  //mdLinksInstruction();
+  //respuestas-await es la espera de la respuesta
+  const answerMdLinks= await mdLinksInstruction();
+  const { URL } = answer;
+  console.log(answer);
 
-
-
-
-
-
-
-
-// // -----------------------------------
-// fs.readdir(process.argv[2], (err, files) => {
-//   //console.log(files);
-//   //recorrer los arrays
-//   //files.forEach( (file) => {
-//     const filterFiles = files.filter( (file) => {
-//       return path.extname(file) === '.' + process.argv[3]
-//     })
-//     .forEach( (file) => { console.log(file);
-//     });
-
-//     // console.log(filterFiles);
-//     // console.log(files);
-//     //console.log(file);
-//     /*if(path.extname(file) === '.' + process.argv[3]) {
-//       console.log(file);
-//       */
-//     });
-
-
-
-
-
-
-
-
-
-
-// console.log('hola');
-
-// const file = process.argv[2];
-// // readfile le inyecta el valor a la funcion anonima
-// fs.readFile(file, 'utf8', (err,data) => {
-//   let numLines = data.split('\n').length -1;
-  
-//   console.log(numLines);
-
-// });
-
-// console.log('chao');
-
-
-
-
-
-
-//leyendo lineas del archivo
-/*
-const numLines = 
-fs.readFileSync(process.argv[2], 'utf8')
-.split('\n').length -1;
-
-console.log(numLines);
-*/
-
-
-
-
-
-// //libraries
-
-// //filesystem
-// const fs = require('fs');
-// //Comandos de shell portátiles de Unix
-// const shelljs = require('shelljs');
-// // colores para la cli
-// const chalk = require('chalk');
-// // cabeceras con caracteres y diferentes estilos de tipografia
-// const figlet = require('figlet');
-// //colección de interfaces de usuario de línea de comando comunes
-// const inquirer = require('inquirer');
-
-
-
-// //cachar la respuesta del usuario, link
-
-
-
-// //1.2 funcion para mostrar instrucciones
-// const initInstruction = () => {
-//   const instruction = [
-//     {
-//       name: "URL",
-//       type: "input",
-//       message: "Introduce la ruta para analizar tu archivo : "
-//     },
-//   ];
-//   return inquirer.prompt(instruction);
-// }
-
-
-// //1.1 iniciando funcion cabecera de bievenida a md-links setg
-// const initLibrary = () => {
-//   console.log(
-//     chalk.green(
-//       figlet.textSync('MD-LINKS SETG', {
-//         font: "AMC Slash",
-//         horizontalLayout:"default",
-//         verticalLayout: "default"
-//       })
-//     )
-// );
-// };
-
-// //1.- Funcion principal MDLINKS
-// const mdLinks = async () => {
-//   //mostrar texto de presentacion de la libreria md-links
-//   initLibrary();
-//   //y solicitar que introduzca el link a analizar
-//   initInstruction();
-//   //
-//   catchInput();
-
-//   //
-
-  
-// };
-
-// mdLinks();
-// //guardando pequeño avance
-
-// /*module.exports = () => {
-//   // ...
-// };
-// */
+};
+  initMdLinks();
