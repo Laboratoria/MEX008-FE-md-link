@@ -4,7 +4,7 @@ const mdLinks = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-m
 //Función mdLinks que devuelve promesa(array de obletos)
 mdLinks(process.argv[2], process.argv[3])
 .then(links => console.log(links))
-.then(validate => console.log(validate))
+//.then(validate => console.log(validate))
 .catch( error => console.error(error));
 
 //console.log(process.argv[2],process.argv[3]);
