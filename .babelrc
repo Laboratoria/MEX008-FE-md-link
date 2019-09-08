@@ -1,0 +1,5 @@
+{
+    "presets":["@babel/preset-env"]  /*Configura todas nuestras caracteristicas de ES6: import, export, arrow func y fetch*/
+}
+
+/*Investigar para que es este archivo*/

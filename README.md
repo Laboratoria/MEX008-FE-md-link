@@ -1,4 +1,13 @@
 # Markdown Links
+[Diagrama](https://www.lucidchart.com/publicSegments/view/c43fc00c-68af-41be-977e-c5bf0af3d6d3/image.png)
+
+![Diagrama](https://www.lucidchart.com/publicSegments/view/9e42af2d-cfb2-4d5f-8e91-6bcb2c07885f/image.png)
+
+
+
+
+
+
 
 ## Índice
 
