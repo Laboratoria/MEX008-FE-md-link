@@ -12,9 +12,32 @@ const checkPath = (userPath) => {
   return path.resolve(userPath);
 };
 
+//FUNCION QUE VA A LEER Y REVISAR LA RUTA
+// REALIZAR FILTRO PAARA SABER SI ES ARCHIVO MD
+const readUserPath =(userPath, arrayFile) => {
+  arrayFile = [];
+  /*USANDO LAS EXPRESIONES REGULARES,
+  HACEMOS EL PATRON QUE VA A INDICAR QUE BUSQUE EN TODA LA RUTA
+  LA EXTENSION MD */
+  const expRegMD = /.\.(md|MD?)$/g;
+  const route = fs. statSync(userPath);
+
+  if(route.isDirectory()) {
+    const listFile = fs.readdirSync(userPath);
+    listFile.forEach((file) => {
+        const newPath = path.join(userPath, file);
+        readUserPath(newPath, arrayFile);
+    });
+} else if(isFile() && regExpMD.text(path.basename(userPath))) {
+    arrayFile.push(userPath);
+}
+return userPath;
+};
+
 
 
 exports.checkPath = checkPath;
+exports.readUserPath = readUserPath;
 
 
 
