@@ -4,6 +4,7 @@ const chalk = require('chalk');
 const figlet= require('figlet');
 //const shelljs = require('shelljs');
 const inquirer = require('inquirer');
+const path = require('path');
 
 
 //FUNCION PARA EVALUAR SI LA RUTA ES RELATIVA O ABSOLUTA
@@ -14,13 +15,19 @@ const checkPath = (userPath) => {
   return path.resolve(userPath); // "path.resolve"--> vuelve la ruta relativa a absoluta
 };
 
-//Funcion para solicitar la ruta a revisar
+//Funcion para solicitar la ruta a revisar y seleccionar la opcion
 const inputCli = () => {
   const inputMdLinks = [
     {
       name: 'URL',
       type: 'input',
       message: 'Ruta a analizar:'
+    },
+    {
+      name: 'OPTIONS',
+      type: 'list',
+      message: 'Elige una opción:',
+      choices: ['--validate', '--stats', '--validate --stats', '--ayuda']
     },
   ];
   return inquirer.prompt(inputMdLinks);
@@ -34,12 +41,12 @@ const headerInitCli = () => {
     verticalLayout: 'default'
   })
   ));
-  console.log(chalk.cyan.bold('MODO DE UEJECUCIÓN: \n 1.- Escribe una ruta: (ejemplo: mdlinks-setg <path>'));
-  console.log(chalk.cyan.bold('2.- A continuación, deberás elegir alguna de las sig.'));
-  console.log(chalk.yellow.bold('Opciones: \n   [--validate]'));
-        console.log(chalk.yellow.bold('   [--stats]'));
-        console.log(chalk.yellow.bold('   [--validate --stats]'));
-        console.log(chalk.yellow.bold('   [--help]'));
+  // console.log(chalk.cyan.bold('MODO DE UEJECUCIÓN: \n 1.- Escribe una ruta: (ejemplo: mdlinks-setg <path>'));
+  // console.log(chalk.cyan.bold('2.- A continuación, deberás elegir alguna de las sig.'));
+  // console.log(chalk.yellow.bold('Opciones: \n   [--validate]'));
+  //       console.log(chalk.yellow.bold('   [--stats]'));
+  //       console.log(chalk.yellow.bold('   [--validate --stats]'));
+  //       console.log(chalk.yellow.bold('   [--help]'));
   console.log(chalk.cyan.bold('ejemplo: mdlinks-setg <path> --stats'));
 };
 
@@ -49,8 +56,10 @@ const initCli = async () => {
   headerInitCli();
   //funcion que pide al usario la ruta
   const answerMdLinks = await inputCli();
-  const {URL} = URLinks;
-  checkPath(URL);
+  const { URL, OPTIONS } = answerMdLinks;
+  console.log(answerMdLinks);
+  //
+  const pathLinks =checkPath(URL);
 
 };
 
