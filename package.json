@@ -1,4 +1,33 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "daynizyvc",
+  "version": "1.0.0",
+  "description": "\"Mapea links para ver si estan rotos o no\"",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daynizyvc/MEX008-FE-md-link.git"
+  },
+  "keywords": [
+    "link"
+  ],
+  "author": "Dayniz V",
+  "license": "ISC",
+  "bin": {
+    "md-links": "./cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Daynizyvc/MEX008-FE-md-link/issues"
+  },
+  "homepage": "https://github.com/Daynizyvc/MEX008-FE-md-link#readme",
+  "dependencies": {
+    "markdown-it": "^9.1.0",
+    "node-fetch": "^2.6.0",
+    "path": "^0.12.7"
+  }
 }
