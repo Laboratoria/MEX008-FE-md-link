@@ -1,7 +1,7 @@
 {
   "name": "mdlinks-setg",
   "version": "0.0.0",
-  "description": "## Índice",
+  "description": "Libreria para buscar links dentro de archivos MD. Creado en Laboratoria",
   "main": "index.js",
   "directories": {
     "test": "test"

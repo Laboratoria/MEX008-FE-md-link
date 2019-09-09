@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { mdLinks} from './src/index.js';
-import { getLinksStats, getBrokenLinksStats } from "./src/optionsfile.js";
+import { mdLinks } from './src/index';
+import { getLinksStats, getBrokenLinksStats } from "./src/optionsfile";
 
 const chalk = require('chalk');
 
