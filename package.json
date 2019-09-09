@@ -1,4 +1,36 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "the-links",
+  "version": "0.1.1",
+  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Entregables](#6-entregables)\r * [7. Hacker edition](#7-hacker-edition)\r * [8. Evaluación](#8-evaluación)\r * [9. Pistas, tips y lecturas complementarias](#9-pistas-tips-y-lecturas-complementarias)\r * [10. Checklist](#10-checklist)",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViriAvemed/MEX008-FE-md-link.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "viri-links": "./index.js",
+    "validate": "./index.js",
+    "stats": "./index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/ViriAvemed/MEX008-FE-md-link/issues"
+  },
+  "homepage": "https://github.com/ViriAvemed/MEX008-FE-md-link#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "markdown-it": "^9.1.0",
+    "minimist": "^1.2.0",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0"
+  }
 }
