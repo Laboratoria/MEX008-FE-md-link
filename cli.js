@@ -1,107 +1,58 @@
 #!/usr/bin/env node
 
-//importando MDLINKS de acuerdo al readme
 const chalk = require('chalk');
 const figlet= require('figlet');
 //const shelljs = require('shelljs');
 const inquirer = require('inquirer');
 
-const mdLinks = require('./src/index.js');
-const [, , ...args] = process.argv;
-const directory = args.shift();
-const options = {
-  validate: false,
-  stats: false,
+
+//FUNCION PARA EVALUAR SI LA RUTA ES RELATIVA O ABSOLUTA
+const checkPath = (userPath) => {
+  if(path.isAbsolute(userPath)) { //"path.isAbsolute"--> determina si la ruta es absoluta
+    return userPath;
+  }
+  return path.resolve(userPath); // "path.resolve"--> vuelve la ruta relativa a absoluta
 };
 
-
-const ejectProject = () => {
-
-    const instructions = () => {
-        console.log('Uso: \n   md-links <path> [options]');
-        console.log('Opciones: \n   [--validate]');
-        console.log('   [--stats]');
-        console.log('   [--validate --stats]');
-        console.log('   [--help]');
-      };
-      
-      if (directory && args.includes('--stats') && args.includes('--validate')) {
-        options.stats = true;
-        options.validate = true;
-        mdLinks(directory, options)
-          .then(result => {
-            console.log(`Total: ${result.total} \nUnique: ${result.unique} \nBroken: ${result.broken} `);
-          });
-      } else if (directory && args[0] === undefined) {
-        options.stats = false;
-        options.validate = false;
-        mdLinks(directory, options)
-          .then(result => {            
-            result.forEach(element => {
-              console.log(`${element.file}  ${element.href}  ${element.text}`);
-            });
-          });
-      } else if (directory && args[0] === '--validate') {
-        options.validate = true;
-        options.stats = false
-        mdLinks(directory, options)
-          .then(result => {            
-            result.forEach(element => {
-              console.log(`${element.file}  ${element.href}  ${element.text}  ${element.status}`);
-            });
-          });
-      } else if (directory && args[0] === '--stats') {
-        options.stats = true;
-        mdLinks(directory, options)
-          .then(result => {      
-            console.log(`Total: ${result.total} \nUnique: ${result.unique}`);
-          });
-      } else if (directory === '--help') {
-        instructions();
-      } else if (directory !== '--help' || route !== 'md-links') {
-        console.log('Ruta ingresada no existe. \nIngrese comando --help');
-      };
+//Funcion para solicitar la ruta a revisar
+const inputCli = () => {
+  const inputMdLinks = [
+    {
+      name: 'URL',
+      type: 'input',
+      message: 'Ruta a analizar:'
+    },
+  ];
+  return inquirer.prompt(inputMdLinks);
 };
 
-    
-  
-  
-  //Funcion para mostrar instruccion
-  const mdLinksInstruction = () => {
-    const oneInstruction = [
-      {
-        name: 'URL',
-        type: 'input',
-        message: 'Introduce una ruta válida para comenzar: '
-      },
-    ];
-    return inquirer.prompt(oneInstruction);
-  };
-  
-  //iniciando funcion cabecera
-  const headerMdlinks = () => {
-    console.log(
-      chalk.blue(
-        figlet.textSync('MD LINKS', {
-          font: 'AMC Tubes',
-          horizontalLayout: 'default',
-          verticalLayout: 'default'
-        })
-      )
-    );
-  };
-  
-  //Funcion principal para iniciar todo
-  const initMdLinks = async () => {
-    //mostrar cabecera de bienvenida-inicio-
-    headerMdlinks();
-    //solicitar que introduzca el link a analizar
-    //mdLinksInstruction();
-    //respuestas-await es la espera de la respuesta
-    const answerMdLinks= await mdLinksInstruction();
-    const {URL}= ejectProject();
-    console.log(URL);
-    
-  
-  };
-    initMdLinks();
+//Funcion Cabecera de presentacion de la CLI
+const headerInitCli = () => {
+  console.log(chalk.bgYellow(figlet.textSync('MD  LINKS', {
+    font: 'AMC Tubes',
+    horizontalLayout: 'default',
+    verticalLayout: 'default'
+  })
+  ));
+  console.log(chalk.cyan.bold('MODO DE UEJECUCIÓN: \n 1.- Escribe una ruta: (ejemplo: mdlinks-setg <path>'));
+  console.log(chalk.cyan.bold('2.- A continuación, deberás elegir alguna de las sig.'));
+  console.log(chalk.yellow.bold('Opciones: \n   [--validate]'));
+        console.log(chalk.yellow.bold('   [--stats]'));
+        console.log(chalk.yellow.bold('   [--validate --stats]'));
+        console.log(chalk.yellow.bold('   [--help]'));
+  console.log(chalk.cyan.bold('ejemplo: mdlinks-setg <path> --stats'));
+};
+
+//Funcion principal para iniciar proyecto
+const initCli = async () => {
+  //funcion para mostrar cabecera de bienvenida con libreria Figlet
+  headerInitCli();
+  //funcion que pide al usario la ruta
+  const answerMdLinks = await inputCli();
+  const {URL} = URLinks;
+  checkPath(URL);
+
+};
+
+initCli();
+
