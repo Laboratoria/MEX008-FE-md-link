@@ -20,6 +20,7 @@ modulo.exportar es igual a una función anónima {
 
 
 ## Descripción del módulo
+md-links es un módulo ejecutable e instalable en Node.js que sirve para determinar si un link esta roto o sigue funcionando dentro de un archivo markdown.
 ## Instrucciones de instalación/uso
 ## Documentación del API
 ## Ejemṕlos
