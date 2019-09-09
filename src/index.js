@@ -1,5 +1,11 @@
-#!/usr/bin/env node
 
+
+
+
+
+
+
+/*
 //libraries
 //filesystem
 const fs = require('fs');
@@ -73,3 +79,4 @@ const initMdLinks = async () => {
 
 };
   initMdLinks();
+  */
