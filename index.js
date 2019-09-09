@@ -39,14 +39,14 @@ const mdLinks = (path, options) => {
                             //console.log(arrayLin);
                             
                             //arrayLin.forEach(element => {
-                           https.get(urls[15].href, (res) => {
+                           https.get('https://github.com/Laboratoria/ec-js-deep-dive-exercises/blob/event-handling/event-handling/00-fb-post.js', (res) => {
                            const { statusCode } = res;
                            if (statusCode == 200) {
-                           resolve(urls[15].href + ' 200' + ' ok');
+                           resolve('https://github.com/Laboratoria/ec-js-deep-dive-exercises/blob/event-handling/event-handling/00-fb-post.js' + ' 200' + ' ok');
                                                                   
                            console.log('holi');
                            }else if(statusCode == 404){
-                           reject(urls[30].href + ' 404' + ' fail')
+                           reject('https://github.com/Laboratoria/ec-js-deep-dive-exercises/blob/event-handling/event-handling/00-fb-post.js' + ' 404' + ' fail')
                                                                   
                            }else{
                             let error = new Error('No es un link https o es un error diferente')

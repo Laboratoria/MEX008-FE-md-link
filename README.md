@@ -33,9 +33,11 @@ Ejemplo de introducción de ruta relativa sin options
 
 ![ruta sin options](img/objetodearray.png)
 
-Ejemplo de introducción de ruta relativa con la options validate
+Ejemplo de introducción de ruta relativa con la options validate ok y fail
 
 ![ruta sin options](img/validate.png)
+
+![ruta sin options](img/fail.png)
 
 Ejemplo de introducción de una ruta con extensión diferente de .md (devuelve un error)
 
