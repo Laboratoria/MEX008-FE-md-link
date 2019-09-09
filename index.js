@@ -1,5 +1,5 @@
 const geturls = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/gethtml.js');
-//const validateurl = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/validateurl.js')
+const validateurl = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/validateurl.js')
 const fs = require('fs');
 const https = require('https');
 
@@ -26,20 +26,30 @@ const mdLinks = (path, options) => {
                 fs.readFile(path, (err, data) => {
                     let urls = [];
                     urls =  geturls(err, data)
+                    //resolve(urls)
                     //console.log(urls);
                     //urls.forEach(element => {
-                        https.get(urls[15].href, (res) => {
-                            const { statusCode } = res;
-                            if (statusCode == 200) {
-                                resolve('ok');
+                       
 
-                                console.log('holi');
-                            }else if(statusCode == 404){
-                                reject('fail')
 
-                            }
+                            https.get(urls[15].href, (res) => {
+                                const { statusCode } = res;
+                               if (statusCode == 200) {
+                                     resolve(urls[15].href + ' 200' + ' ok');
+     
+                                    console.log('holi');
+                                }else if(statusCode == 404){
+                                    reject(urls[15].href + ' 404' + ' fail')
+     
+                               }else{
+                                    let error = new Error('No es un link https o es un error diferente')
+                                    reject(error)
+                                }
+     
+                             })
+                        
 
-                        })
+                        
                         
                     //});
                 })

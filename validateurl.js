@@ -2,7 +2,8 @@
 const marked = require('marked');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
-const http = require('http');
+const https = require('https');
+const path = require('path')
 //const { statusCode } = res;
 
 
@@ -18,16 +19,13 @@ const validateurl = (err, data) => {
        etiquetasLi.forEach(element => {
         //const arrlink = path.parse(href);// se puede usar también url en vez de path 
         const link = new Object();
-        link.href = element.getAttribute('href');
+        const href = element.getAttribute('href')
+        link.href = path.parse(href);
         link.text = element.textContent;
         link.file = process.argv[2];
-        link.status = http.get(element.getAttribute('href'), (res) => {
-            const { statusCode } = res;
-            if (statusCode == 200) {
-                return statusCode
-            }
-        });
-        link.ok = ok;
+          
+    
+        
         arrayOflinks.push(link);
         //console.log(link);
         
