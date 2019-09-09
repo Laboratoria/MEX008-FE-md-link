@@ -2,21 +2,21 @@ const fs = require ('fs');
 const path = require('path');
 
 //FUNCION SI LA RUTA es ABSOLUTA
-export const checkPathIsAbsolute = userPath => {
+const checkPathIsAbsolute = userPath => {
     //"path.isAbsolute"--> determina si la ruta es absoluta
     const userPathAbsolute = path.isAbsolute(userPath);
     return userPathAbsolute;
 };
 
 //CONVERTIR LA FUNCION RELATIVA --> ABSOLUTA
-export const checkPathRelative = userPath => {
+const checkPathRelative = userPath => {
     // "path.resolve"--> vuelve la ruta relativa a absoluta
     const newPathAbsolute = path.resolve(userPath);
     return newPathAbsolute;
 };
 
 //FUNCION QUE VA LEER SI LA RUTA ES UN ARCHIVO
-export const userPathFile = userPath => {
+const userPathFile = userPath => {
     //"fs.IstatSync"-->
     const filePathStatus = fs.IstatSync(userPath);
     // ".isFile"-->
@@ -26,7 +26,7 @@ export const userPathFile = userPath => {
 };
 
 //FUNCION QUE VA A REVISAR SI ES UN DIRECTORIO
-export const userPathDirectory = userPath => {
+const userPathDirectory = userPath => {
     //
     const directoryPathStatus = fs.IstatSync(userPath);
     //
@@ -35,7 +35,7 @@ export const userPathDirectory = userPath => {
     return checkDirectoryPath;
 };
 //FUNCION PARA LEER EL DIRECTORIO
-export const searchDirectoryPath = (dirRoute) => {
+const searchDirectoryPath = (dirRoute) => {
     let arrayFile = [];
 
     if (!userPathDirectory(dirRoute)) {
@@ -55,6 +55,13 @@ export const searchDirectoryPath = (dirRoute) => {
     };
     return arrayFile;
 };
+
+exports.checkPathIsAbsolute = checkPathIsAbsolute;
+exports.checkPathRelative = checkPathRelative;
+exports.userPathFile = userPathFile;
+exports.userPathDirectory = userPathDirectory;
+exports.searchDirectoryPath = searchDirectoryPath;
+
 
 
 

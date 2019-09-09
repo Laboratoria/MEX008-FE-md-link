@@ -4,7 +4,7 @@ const resultLinks = require('./searchlinks.js');
 const nodefetch = require('node-fetch');
 
 //FUNCION PARA VALIDAR LOS LINKS ENCONTRADOS EN ARCHIVO
-export const validateLinks = (route) => {
+const validateLinks = (route) => {
     const objLinks = resultLinks(route);
     const runLinks = objLinks.map((links) => new Promise((resolve) => {
       const linksHref = nodefetch(links.href);
@@ -30,7 +30,7 @@ export const validateLinks = (route) => {
   };
   
   // Función ver los Stats(total de links, links únicos) de los Links
-  export const getLinksStats = (path) => {
+const getLinksStats = (path) => {
     return new Promise((resolve, reject) => {
       validateLinks(path)
         .then((response) => {
@@ -43,7 +43,7 @@ export const validateLinks = (route) => {
   };
   
   // Función para ver los links rotos
-  export const getBrokenLinksStats = (path) => {
+const getBrokenLinksStats = (path) => {
     return new Promise((resolve, reject) => {
       validateLinks(path)
         .then((response) => {
@@ -53,3 +53,7 @@ export const validateLinks = (route) => {
         .catch(error => reject(error));
     });
   };
+
+  exports.validateLinks = validateLinks;
+  exports.getLinksStats = getLinksStats;
+  exports.getBrokenLinksStats = getBrokenLinksStats;
