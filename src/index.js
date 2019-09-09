@@ -1,13 +1,13 @@
 const fs = require('fs');
-const optionsLinks = require('./optionsLinks.js');
-const validations = require('./validations.js');
+const optionsLinks = require('./optionsfile.js');
+const validations = require('./pathreadfile.js');
 
 const mdLinks = (path, options) => {
   const resultFinal = {};
   const objTotalLinks = [];
   if (fs.existsSync(path)) {
-    const pathAbsolute = validations.isPathAbsolute(path);
-    const arraypathFileMd = validations.readPath(pathAbsolute);
+    const pathAbsolute = validations.checkPath(path);
+    const arraypathFileMd = validations.readUserPath(pathAbsolute);
     return new Promise((resolve, reject) => {
       if (!options.validate && !options.stats) {
         resolve(optionsLinks.readLinks(arraypathFileMd));

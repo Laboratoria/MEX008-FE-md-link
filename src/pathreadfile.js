@@ -1,15 +1,12 @@
 const path = require('path');
 const fs = require('fs');
-//const chalk = require('chalk');
 
 //FUNCION PARA EVALUAR SI LA RUTA ES RELATIVA O ABSOLUTA
 const checkPath = (userPath) => {
-  //"path.isAbsolute"--> determina si la ruta es absoluta
-  if(path.isAbsolute(userPath)) {
+  if(path.isAbsolute(userPath)) { //"path.isAbsolute"--> determina si la ruta es absoluta
     return userPath;
   }
-  // "path.resolve"--> vuelve la ruta relativa a absoluta
-  return path.resolve(userPath);
+  return path.resolve(userPath); // "path.resolve"--> vuelve la ruta relativa a absoluta
 };
 
 //FUNCION QUE VA A LEER Y REVISAR LA RUTA
@@ -20,7 +17,7 @@ const readUserPath =(userPath, arrayFile) => {
   HACEMOS EL PATRON QUE VA A INDICAR QUE BUSQUE EN TODA LA RUTA
   LA EXTENSION MD */
   const expRegMD = /.\.(md|MD?)$/g;
-  const route = fs. statSync(userPath);
+  const route = fs.statSync(userPath);
 
   if(route.isDirectory()) {
     const listFile = fs.readdirSync(userPath);
@@ -28,7 +25,7 @@ const readUserPath =(userPath, arrayFile) => {
         const newPath = path.join(userPath, file);
         readUserPath(newPath, arrayFile);
     });
-} else if(isFile() && regExpMD.text(path.basename(userPath))) {
+} else if(route.isFile() && expRegMD.test(path.basename(userPath))) {
     arrayFile.push(userPath);
 }
 return userPath;

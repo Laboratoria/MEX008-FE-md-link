@@ -28,7 +28,7 @@ const readLinks = (arrayFileMD) => {
   // Función --validate
   const validateLinks = (arrayData) => {
     const arrayPromises = arrayData.map((url) => {
-      const urlRef = fetch(url.href);
+      const urlRef = nodeFetch(url.href);
       return urlRef.then(res => ({
         file: url.file,
         href: url.href,
