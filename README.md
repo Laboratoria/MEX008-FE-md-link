@@ -1,7 +1,6 @@
-# Markdown Links
+# Md-links-v100
 
 ## Índice
-
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
@@ -14,6 +13,35 @@
 * [10. Checklist](#10-checklist)
 
 ***
+
+# md-links-v100
+
+## Instalación
+
+Para instalar md-links-v100 es necesario que lo hagas desde tu terminal con el comando:
+
+```sh
+$ npm i md-links-v100
+```
+
+Una vez que lo tengas instalado, sera necesario que ingreses el comando search-links y la ruta del documento con extensión .md que deseas analizar:
+<br>
+EJEMPLO:
+```sh
+$ search-links ./README.md
+```
+
+La librería únicamente lee archivos con extensión .md, extrayendo los links que se encuentran en el documento:
+
+<img src="IMG/read.png">
+
+Además de ubicar el estatus de los mismos, es decir, cuáles de estos están rotos y cuáles no:
+
+<img src="IMG/Extract1.png">
+
+<img src="IMG/Extract2.png">
+
+
 
 ## 1. Preámbulo
 
@@ -263,8 +291,8 @@ Te aconsejamos revisar [nuestra rúbrica](https://docs.google.com/spreadsheets/u
 para ver la descripción detallada de cada _habilidad_ y cada _nivel_. Te
 recomendamos también que trates de aplicarte la rúbrica a tí misma y/o a los
 proyectos de tus compañeras a lo largo del Bootcamp para ir viendo tu evolución.
-
 ### Habilidades Blandas (Soft Skills)
+
 
 | Habilidad                                       | 
 |-------------------------------------------------|
