@@ -3,7 +3,7 @@
 ### Diagrama de flujo:
 El algoritmo que describe el funcionamiento del módulo mdlinks se muestra a continuación:
 
-![algoritmo-mdlinks](img/modulomdlinks.jpeg)
+![algoritmo-mdlinks](img/algoritmomdlinks.jpeg)
 
 El algoritmo que describe el funcionamiento del ejecutable cli.js se muestra a continuación:
 
