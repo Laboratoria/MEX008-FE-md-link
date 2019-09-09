@@ -1,5 +1,8 @@
-import { searchDirectoryPath } from "./searchlinks.js";
-import { validateLinks } from "./optionsfile,js";
+// import { searchDirectoryPath } from "./searchlinks.js";
+// import { validateLinks } from "./optionsfile,js";
+
+const searchDirectoryPath = require('./searchlinks.js');
+const validateLinks = require('./optionsfile.js');
 
 
 export const mdLinks = (path, options) => {

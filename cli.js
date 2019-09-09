@@ -3,8 +3,11 @@
 // import { mdLinks } from './src/index';
 // import { getLinksStats, getBrokenLinksStats } from "./src/optionsfile";
 
-const chalk = require('chalk');
+const mdLinks = require('./src/index.js');
+const getLinksStats = require('./src/optionsfile');
+const getBrokenLinksStats = require('./src/optionsfile.js');
 
+const chalk = require('chalk');
 const args = process.argv.slice(2);
 
 //OPCIONES

@@ -1,5 +1,7 @@
-import { resultLinks } from "./searchlinks.js";
-import nodefetch from 'node-fetch';
+// import { resultLinks } from "./searchlinks.js";
+// import nodefetch from 'node-fetch';
+const resultLinks = require('./searchlinks.js');
+const nodefetch = require('node-fetch');
 
 //FUNCION PARA VALIDAR LOS LINKS ENCONTRADOS EN ARCHIVO
 export const validateLinks = (route) => {

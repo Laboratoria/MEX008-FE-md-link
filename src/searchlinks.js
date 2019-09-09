@@ -1,4 +1,6 @@
-import { searchDirectoryPath } from "./pathfile.js";
+//import { searchDirectoryPath } from "./pathfile.js";
+const searchDirectoryPath = require('./pathfile.js');
+
 const path = require('path');
 const fs = require('fs');
 
