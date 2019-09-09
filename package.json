@@ -1,4 +1,37 @@
 {
-  "name": "md-links",
-  "version": "0.1.0"
+  "name": "mdlinks-setg",
+  "version": "0.0.0",
+  "description": "Libreria para buscar links dentro de archivos MD. Creado en Laboratoria",
+  "main": "cli.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silviatrinidad/MEX008-FE-md-link.git"
+  },
+  "keywords": [
+    "md",
+    "markdown"
+  ],
+  "author": "Trinity-seg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/silviatrinidad/MEX008-FE-md-link/issues"
+  },
+  "homepage": "https://github.com/silviatrinidad/MEX008-FE-md-link#readme",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "chalk": "2.4.2",
+    "figlet": "1.2.3",
+    "shelljs": "0.8.3",
+    "inquirer": "6.5.1",
+    "node-fetch": "2.6.0",
+    "request": "2.88.0",
+    "request-promise": "4.2.4"
+  },
+  "bin": "./cli.js"
 }
