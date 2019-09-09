@@ -2,7 +2,19 @@ const path = require('path');
 const fs = require('fs');
 //const chalk = require('chalk');
 
+//FUNCION PARA EVALUAR SI LA RUTA ES RELATIVA O ABSOLUTA
+const checkPath = (userPath) => {
+  //"path.isAbsolute"--> determina si la ruta es absoluta
+  if(path.isAbsolute(userPath)) {
+    return userPath;
+  }
+  // "path.resolve"--> vuelve la ruta relativa a absoluta
+  return path.resolve(userPath);
+};
 
+
+
+exports.checkPath = checkPath;
 
 
 
