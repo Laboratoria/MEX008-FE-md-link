@@ -10,7 +10,7 @@ const gethtml = (err, data) => {
         const html = marked(str);
         const dom = new JSDOM(html);
        const etiquetasLi = dom.window.document.querySelectorAll('a');
-        console.log(typeof etiquetasLi);
+        //console.log(typeof etiquetasLi);
         const arrayOflinks = [];
         
        etiquetasLi.forEach(element => {

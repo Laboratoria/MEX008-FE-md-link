@@ -25,12 +25,8 @@ const mdLinks = (path, options) => {
             //if ({'validate': true}) {
                 fs.readFile(path, (err, data) => {
                     let urls = [];
-                    //resolve(urls)
-                    //urls.forEach(element => {
-                        
-                        
                         urls =  geturls(err, data)
-                        console.log(urls.length);
+                        //console.log(urls.length);
                        // for(let i = 0; i <= urls.length; i = i + 1 ){
                            //const arrayValidate = []
                            //let arrayLin = [];
@@ -58,20 +54,9 @@ const mdLinks = (path, options) => {
                            }
                                                               
                          })//aquí acaba el callback de https
-                           //});//aquí termina el forEach
-                        //}//aquí acaba el for
-                        
-                        
-                        
-                        
-                    //});
-                })
-                
-            //else if ({'validate': false}) {
-                
-            //}
-               
+                           
                     
+                })         
         }
         else{
             let error = new Error('Error de lectura, no se trata de un archivo con extensión .md');
