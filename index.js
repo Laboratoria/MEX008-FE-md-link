@@ -1,7 +1,6 @@
-const geturls = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/gethtml.js');
-//const validateurl = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/validateurl.js')
-const fs = require('fs');
-const https = require('https');
+// Módulos requeridos
+const validate = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/validate.js')
+const readfile = require('/home/berenice/Documentos/MEX008-FE-md-link/MEX008-FE-md-link/readfile.js')
 
 
 const mdLinks = (path, options) => {
@@ -10,53 +9,19 @@ const mdLinks = (path, options) => {
         const extension = /(.md)$/;
         
         if(extension.exec(path) && options == null){
-            fs.readFile(path, (err, data) => {
-            let urls = [];
-            urls =  geturls(err, data)
-            //console.log(urls);
-            //urls.forEach(element => {
-                resolve(urls);
-                
-                console.log('hola');
-            //});
-        })
+            let fileRead = readfile;
+            resolve(fileRead)
+
         }
-        else if(extension.exec(path) && options == 'validate'){
-            //if ({'validate': true}) {
-                fs.readFile(path, (err, data) => {
-                    let urls = [];
-                        urls =  geturls(err, data)
-                        //console.log(urls.length);
-                       // for(let i = 0; i <= urls.length; i = i + 1 ){
-                           //const arrayValidate = []
-                           //let arrayLin = [];
-                           //for (let i = 0; i < urls.length; i++) {
-                              // let objectLink = {};
-                              // objectLink += urls[i].href;
-                              // arrayLin.push(objectLink)
-                               
-                           // }
-                            //console.log(arrayLin);
-                            
-                            //arrayLin.forEach(element => {
-                           https.get('https://github.com/Laboratoria/ec-js-deep-dive-exercises/blob/event-handling/event-handling/00-fb-post.js', (res) => {
-                           const { statusCode } = res;
-                           if (statusCode == 200) {
-                           resolve('https://github.com/Laboratoria/ec-js-deep-dive-exercises/blob/event-handling/event-handling/00-fb-post.js' + ' 200' + ' ok');
-                                                                  
-                           console.log('holi');
-                           }else if(statusCode == 404){
-                           reject('https://github.com/Laboratoria/ec-js-deep-dive-exercises/blob/event-handling/event-handling/00-fb-post.js' + ' 404' + ' fail')
-                                                                  
-                           }else{
-                            let error = new Error('No es un link https o es un error diferente')
-                               reject(error)
-                           }
-                                                              
-                         })//aquí acaba el callback de https
-                           
+        else if(extension.exec(path) && options == '--validate'){
+            // const getfileAll = Promise.all([readfile]).then(urls=>console.log(urls))
+            
+            let validateurls = validate;
+            
+            resolve(validateurls)
+            // resolve(getfileAll);
                     
-                })         
+                             
         }
         else{
             let error = new Error('Error de lectura, no se trata de un archivo con extensión .md');

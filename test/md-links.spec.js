@@ -2,10 +2,6 @@
 //const cli = require('../cli.js');
 const mdLinks = require('../index.js')
 
-
-
-
-
 describe('función mdLinks', () => {
 
   it('Debería ser una función', () => {
@@ -14,3 +10,6 @@ describe('función mdLinks', () => {
   });
 
 });
+
+// Test de promesas
+ 
